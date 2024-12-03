@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor Conexp</title>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap.min.css" media="screen' %}">
+</head>
+<body>
+    <nav class = "navbar container">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            {% if user.is_authenticated %}
+            
+            <li>
+                <a href="/trabajadores">Trabajadores</a>
+            </li>
+            
+            <li>
+                <a href="/insertar">Insertar trabajador</a>
+            </li>
+            {% if perms.edit_dosis_success %}
+            <li>
+                <a href="/dosis">Dosis</a>
+            </li>
+            {% endif %}
+            {% if perms.edit_dosis_success %}
+            <li>
+                <a href="/insertar_dosis">Insertar dosis</a>
+            </li>
+            {% endif %}
+
+                <li>User:{{ user.get_username }}</li>
+                <li><a href="{% url 'logout' %}?next={{request.path}}"> Logout </a></li>
+
+            {% else %}
+                <li><a href="{% url 'login' %}?next={{request.path}}"> Login </a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    
+    <main class = "container">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+{% extends 'enmarcados/base.html' %}
+
+{% block content %}
+
+<h1>Dosis adquirida</h1>
+
+
+<table style="table-layout: fixed;
+width: 100%;
+border-collapse: collapse;
+border: 3px solid rgb(179, 173, 179);
+background-color: #888888;
+margin: auto;">
+
+
+    <tr>
+        <th scope="col">Trabajador</th>
+        <th scope="col">Hp(10)</th>
+        <th scope="col">Hp(0.07)</th>
+        <th scope="col">Hp(3)</th>
+        <th scope="col">E(50)</th>
+        <th colspan="2">Acciones</th>
+    </tr>
+    
+    
+    {% for d in dosis %}
+        <tr>
+        
+            <td align="center">{{ d.trabajador }}</td>
+            <td align="center">{{ d.d_prof }}</td>
+            <td align="center">{{ d.d_piel }}</td>
+            <td align="center">{{ d.d_crist }}</td>
+            <td align="center">{{ d.d_comp }}</td>
+            <td align="center"><button><a href="{% url 'eliminar_dosis' d.id %}"> Eliminar </a></button></td>
+            <td align="center"><button><a href="{% url 'editar_dosis' d.pk %}"> Modificar </a></button></td>
+       
+        </tr>
+    {% endfor %}
+
+
+</table>
+
+{% endblock content %}

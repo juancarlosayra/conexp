@@ -1,0 +1,30 @@
+{% extends 'enmarcados/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h1>Trabajadores</h1>
+
+<table style="table-layout: fixed;
+width: 100%;
+border-collapse: collapse;
+border: 3px solid rgb(179, 173, 179);
+background-color: #888888;
+margin: auto;">
+    <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Solapin</th>
+        <th colspan="2"> Acciones </th>
+    </tr>
+    {% for trabajador in trabajadores %}
+        <tr>
+            <td align="center"> {{trabajador.name}} </td>
+            <td align="center"> {{trabajador.solapin}} </td>
+            <td align="center"> <button><a href="{% url 'eliminar' trabajador.id %}"> Delete </a></button> </td>
+            <td align="center"> <button><a href="{% url 'editar_trabajador' trabajador.id %}"> Update </a></button> </td>
+        </tr>
+    {% endfor %}
+</table>
+    
+{% endblock content %}

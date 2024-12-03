@@ -1,0 +1,134 @@
+*
+{
+	font-family:arial;
+	text-align:center;
+	
+}
+
+body
+{
+	/*top:50%;
+	left:50%;*/
+	position: relative;
+	/*transform: translate(-50%,-50%);*/
+	/*background-image: url("centis.jpg");*/
+	background-size: 1500px 800px;
+}
+
+.ub1
+{
+	text-align:left;
+	font-weight: bold;
+	color:black;
+	margin-bottom:0.5em;
+	margin-top:0.5em;
+}
+
+.caja1
+{
+	background-color: rgb(247, 247, 247);
+	width:20em;
+    height: auto;
+    position: relative;
+    margin: auto;
+    padding: 2em;
+	color:rgb(0, 0, 0);
+	border-radius:1em;
+	border:0.1em solid rgb(0, 0, 0);
+}
+
+input, select
+{
+	width: 100%;
+    padding: 0.5em;
+	font-size:1em;
+	cursor:pointer;
+	border:none;
+	border-bottom:0.1em solid #BDBFC1;
+	color:black;
+	text-align:left;
+	margin-bottom:1em;
+}
+
+input:hover, select:hover
+{
+	border:none;
+	border-bottom:0.1em solid rgb(121, 255, 222);
+}
+
+input::placeholder 
+{
+	color: #1E265D;
+	font-weight: bold;
+	opacity: 0.5; 
+}
+
+input[type=submit],input[type=reset]
+{
+	border-bottom:0.1em solid #BDBFC1;
+	margin-top: 1em;
+	width:40%;
+	text-align:center;
+	background-color: #0081CF;
+	color:white;
+	cursor:pointer;
+}
+
+input[type=checkbox]
+{
+	margin-left:0;
+	width:10%;
+	cursor:pointer;
+}
+
+.formtlo
+{
+	font-size:2em;
+	font-weight: bold;
+	padding-bottom:0.8em;
+	color:black;
+}
+
+.box{
+	background-color: rgb(247, 247, 247);
+	width:80em;
+    height: auto;
+    position: relative;
+    margin: auto;
+    padding: 2em;
+	color:rgb(0, 0, 0);
+	border-radius:1em;
+	border:0.1em solid rgb(0, 0, 0);
+}
+/*Arreglar filo negro del borde*/
+.search input[type=text]{
+	width: 800px;
+	height: 50px;
+	border-radius: 25px;
+	border: none;
+	border-color: none;
+	background-color: gray;
+}
+
+.search{
+	float: center;
+	margin: 7px;
+}
+
+.search button{
+	background-color: black;
+	color: aqua;
+	float: center;
+	padding: 5px 10px;
+	margin-right: 16px;
+	font-size: 12px;
+	border: none;
+	cursor: pointer;
+}
+
+/*.logoutLblPos{
+
+	position:fixed;
+	right:10px;
+	top:5px;
+ }*/

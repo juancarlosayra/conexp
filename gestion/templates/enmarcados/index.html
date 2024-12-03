@@ -1,0 +1,38 @@
+{% extends 'enmarcados/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<center><img src="{% static 'logo.png' %}" alt="", width="700"></center>
+
+<center><form action="buscar/" method="GET">
+    <input type="text" name="bar">
+    <input type="submit" value="Buscar">
+</form></center>
+
+<p>Resultado: <strong>{{query}}</strong></p>
+
+{% if resultado %}
+
+    <ul>
+        {% for r in resultado %}
+        <li>
+            {{r.name}}
+        </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<h2>Trabajadores Activos</h2>
+
+<p>El sitio tiene el siguente record de visitas</p>
+
+<ul>
+    <li><strong> Trabajadores:</strong> {{num_trabajadores}} </li>
+</ul>
+
+<p>Has visitado esta pagina {{num_visits}} {% if num_visits == 1 %} 
+   vez{% else %} veces{% endif %}</p>
+
+{% endblock %}

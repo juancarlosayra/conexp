@@ -1,0 +1,17 @@
+{% extends 'enmarcados/base.html' %}
+
+{% block content %}
+
+
+<center><h1>Introduzca los campos requeridos</h1>
+
+<form method="post" enctype="multipart/from-data">
+    
+    {% csrf_token %}    
+    {{ form.as_p }}
+    <input type="submit" value="OK">
+
+</form>
+</center>
+
+{% endblock %}

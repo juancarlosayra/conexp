@@ -1,0 +1,16 @@
+.input-group{
+    width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	border: none;
+}
+#Etiqueta{
+    width: auto;
+    height: auto;
+    border-radius: 25px;
+    border: none;
+}
+
+.html{
+    background-color: rgb(10, 176, 176);
+}

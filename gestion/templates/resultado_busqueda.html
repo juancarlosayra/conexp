@@ -1,0 +1,19 @@
+{% extends 'enmarcados/base.html' %}
+
+{% block content %}
+
+    <p>Resultado: <strong>{{query}}</strong></p>
+
+    {% if resultado %}
+
+        <ul>
+            {% for r in resultado %}
+            <li>
+                {{r.name}}
+            </li>
+            {% endfor %}
+        </ul>
+
+    {% endif %}
+
+{% endblock content %}

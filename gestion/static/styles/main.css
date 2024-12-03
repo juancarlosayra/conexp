@@ -1,0 +1,33 @@
+body{
+    background: #343333;
+    color: whitesmoke;
+}
+.navbar{
+    background: #888888;
+    padding: 15px 30px;
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.input{
+    background: rgb(2, 39, 26);
+    padding: 10px;
+    text-align: center;
+}
